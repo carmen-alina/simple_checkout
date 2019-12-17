@@ -10,11 +10,6 @@ describe 'Checkout' do
       my_checkout = Checkout.new
       my_total = my_checkout.scan(my_item)
       expect { my_checkout.scan(my_item) }.to change{my_checkout.total}.by 40
-      #
-      # my_item = Item.new(40)
-      # my_checkout = Checkout.new
-      # my_total = my_checkout.scan(my_item)
-      # expect(my_total).to eq(my_item.price)
     end
   end
 end

@@ -5,9 +5,15 @@ class Checkout
 
   def initialize
     @total = 0
+    @prices_list = []
   end
 
   def scan(item)
+    @prices_list.push(item.print_price)
     @total = @total + item.price
   end
-end
+
+  def print_list
+    @prices_list
+    end
+  end
